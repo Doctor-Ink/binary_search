@@ -14,7 +14,10 @@ def binary_search(list, item):    # В переменных low и high хран
             low = mid + 1
     return None                     # <--- Значение не существует
 
-my_list = [1, 3, 5, 7, 9]
-print(binary_search(list=my_list, item=3))
-print(binary_search(list=my_list, item=-1))
+my_list = [1, 3, 5, 7, 9]           # <--- А теперь протестируем!
+
+print(binary_search(list=my_list, item=3))    # нумерация элементов начинается с 0.
+                                              # второй ячейке соответсвует индекс 1
+print(binary_search(list=my_list, item=-1))   # "None" в Python означает "ничто".
+                                              # это признак того, что элемент не найден
 
