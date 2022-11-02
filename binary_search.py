@@ -8,9 +8,9 @@ def binary_search(list, item):    # В переменных low и high хран
         guess = list[mid]
         if guess == item:           # <--- значение найдено
             return mid
-        if guess > item:            # <--- Много
+        if guess > item:            # <--- much
             high = mid - 1
-        else:                       # <--- Мало
+        else:                       # <--- not much
             low = mid + 1
     return None                     # <--- Значение не существует
 
