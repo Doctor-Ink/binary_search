@@ -4,17 +4,17 @@ def binary_search(list, item):    # В переменных low и high хран
     low = 0                       # той части списка, в которой выполняется поиск
     high = len(list) - 1
     while low <= high:              # <--- пока эта часть не сократится до одного элемента...
-        mid = (low + high) // 2     # <--- проверяем средний элемент
+        mid = (low + high) // 2     # <--- check middle element
         guess = list[mid]
-        if guess == item:           # <--- значение найдено
+        if guess == item:           # <--- value is defined
             return mid
         if guess > item:            # <--- much
             high = mid - 1
         else:                       # <--- not much
             low = mid + 1
-    return None                     # <--- Значение не существует
+    return None                     # <--- Value is not defined
 
-my_list = [1, 3, 5, 7, 9]           # <--- А теперь протестируем!
+my_list = [1, 3, 5, 7, 9]           # <--- Lets testing!
 
 print(binary_search(list=my_list, item=3))    # нумерация элементов начинается с 0.
                                               # второй ячейке соответсвует индекс 1
